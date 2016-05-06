@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <a href="/users/<%= current_user.id %>">My Profile</a>
+  <a href="/logout">Logout</a>
+<% else %>
+  <div id="center-console">
+    <div class="users-wrapper">
+      <a href="/users/login">Users</a>
+    </div>
+
+    <div class="promoters-wrapper">
+      <a href="/promoters/login">Promoters</a>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<h3>Please Sign In Below</h3>
+
+<% if @error %>
+  <p>
+    <%= @error %>
+  </p>
+<% end %>
+
+<form action="/users" method="post">
+  Email:
+  <input type="text" name="user[email]"><br>
+  Password:
+  <input type="password" name="user[password]"><br>
+  <input type="submit" value="Login">
+</form>
+
+<p>
+  don't have an account?<br><a href="/users/new">sign up</a>
+</p>
